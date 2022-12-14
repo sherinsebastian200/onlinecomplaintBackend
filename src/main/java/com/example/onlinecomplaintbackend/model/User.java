@@ -10,24 +10,27 @@ import jakarta.persistence.Table;
 public class User {
     @Id
     @GeneratedValue
-
     private int id;
     private String name;
     private String address;
-    private String phoneno;
     private String email;
+    private int phone;
+    private String username;
     private String password;
+    private String confirm;
 
     public User() {
     }
 
-    public User(int id, String name, String address, String phoneno, String email, String password) {
+    public User(int id, String name, String address, String email, int phone, String username, String password, String confirm) {
         this.id = id;
         this.name = name;
         this.address = address;
-        this.phoneno = phoneno;
         this.email = email;
+        this.phone = phone;
+        this.username = username;
         this.password = password;
+        this.confirm = confirm;
     }
 
     public int getId() {
@@ -54,14 +57,6 @@ public class User {
         this.address = address;
     }
 
-    public String getPhoneno() {
-        return phoneno;
-    }
-
-    public void setPhoneno(String phoneno) {
-        this.phoneno = phoneno;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -70,11 +65,35 @@ public class User {
         this.email = email;
     }
 
+    public int getPhone() {
+        return phone;
+    }
+
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getConfirm() {
+        return confirm;
+    }
+
+    public void setConfirm(String confirm) {
+        this.confirm = confirm;
     }
 }
